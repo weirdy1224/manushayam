@@ -1,0 +1,21 @@
+.loader-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-text {
+  font-family: var(--font-serif);
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.prominent-h {
+  font-size: 5rem;
+  margin: 0 4px;
+  color: var(--primary-gold);
+}

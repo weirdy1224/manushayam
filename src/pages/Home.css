@@ -1,0 +1,624 @@
+.home-page {
+  padding-bottom: 4rem;
+  background-color: var(--bg-cream);
+  /* Overall page background */
+}
+
+.home-container {
+  max-width: 1400px;
+  /* Slightly larger max width for the outer container if needed */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Base Card Style for all UI sections */
+.ui-card {
+  background: #fdfaf6;
+  border-radius: 20px;
+  border: 1px solid var(--primary-gold);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 90vh;
+  min-height: 700px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background-color: #1a1a1a;
+  background-image: url('/assets/Women%20Anti-Hairfall%20Therapy/MANUSHYAM%20MODEL%20IMAGE%20Copyright%20is%20with%20us.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  width: 100%;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0) 100%);
+  z-index: 1;
+}
+
+/* Gold inline border */
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  border: 1px solid rgba(198, 156, 109, 0.7);
+  /* Primary gold with some transparency */
+  border-radius: 30px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 0 5%;
+  margin-left: 2%;
+  transform: translateY(-60px);
+}
+
+.hero-title {
+  font-size: 5rem;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  font-family: var(--font-serif);
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+}
+
+/* Custom Hero Button matching the template */
+.btn-hero {
+  background: linear-gradient(to right, #cc8527, #d0994c);
+  color: white;
+  padding: 14px 36px;
+  border-radius: 5px;
+  /* Pill shape */
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 4px 15px rgba(184, 134, 69, 0.3);
+}
+
+.btn-hero:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(184, 134, 69, 0.4);
+}
+
+.hero-link a {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-bottom: 1px solid white;
+  padding-bottom: 6px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.hero-link a:hover {
+  color: var(--primary-gold);
+  border-color: var(--primary-gold);
+}
+
+/* Best Seller Section - Overlapping Card */
+.overlapping-card {
+  display: flex;
+  background: #fdfaf6;
+  border-radius: 24px;
+  border: 1px solid var(--primary-gold);
+  margin-bottom: 2rem;
+  overflow: hidden;
+  box-shadow: 0 -15px 40px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 10;
+  /* Here is the core overlap magic */
+  margin-top: -100px;
+  /* Add side margins to make it look like a floating card within the container */
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.bestseller-image {
+  flex: 1;
+  min-height: 400px;
+}
+
+.img-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: #f5eedf; /* Faint tan fallback to blend if needed */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bestseller-content {
+  flex: 1;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.badge-text {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #a68a61;
+  border: 1px solid rgba(198, 156, 109, 0.3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  display: inline-block;
+  align-self: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.bestseller-content h2 {
+  font-size: 3.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-dark);
+}
+
+.bestseller-content p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2.5rem;
+  max-width: 400px;
+}
+
+.shop-now-link {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: var(--primary-gold);
+  text-transform: uppercase;
+  align-self: flex-start;
+}
+
+/* Features Section */
+.features-section {
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 24px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2.5rem;
+}
+
+.feature-item {
+  text-align: center;
+  padding: 1rem;
+  border-right: 1px solid rgba(198, 156, 109, 0.3);
+  /* Subtle gold border */
+}
+
+.feature-item:last-child {
+  border-right: none;
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-item h4 {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.feature-item p {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* Philosophy Section */
+.philosophy-section {
+  display: flex;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 24px;
+}
+
+.philosophy-image {
+  flex: 1;
+  min-height: 400px;
+}
+
+.philosophy-content {
+  flex: 1;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.philosophy-content h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-dark);
+}
+
+.philosophy-content p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2.5rem;
+  max-width: 450px;
+  line-height: 1.6;
+}
+
+.learn-more-link {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: var(--primary-gold);
+  text-transform: uppercase;
+  align-self: flex-start;
+  border-bottom: 1px solid var(--primary-gold);
+  padding-bottom: 2px;
+}
+
+/* Ritual Section */
+.ritual-section {
+  padding: 3rem;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 24px;
+}
+
+.ritual-title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.ritual-title-wrapper .line {
+  height: 1px;
+  width: 60px;
+  background-color: var(--primary-gold);
+}
+
+.ritual-title-wrapper h3 {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.ritual-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.step-number {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--primary-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: var(--primary-gold);
+  flex-shrink: 0;
+}
+
+.step-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.step-text h4 {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  color: #333;
+}
+
+.step-text p {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 3rem 4rem;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 24px;
+}
+
+.quote-mark {
+  font-family: var(--font-serif);
+  font-size: 6rem;
+  color: var(--primary-gold);
+  line-height: 0;
+  height: 40px;
+  margin-top: 20px;
+}
+
+.testimonial-text {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-style: italic;
+  flex-grow: 1;
+  color: #333;
+}
+
+.testimonial-author {
+  text-align: right;
+  min-width: 150px;
+  border-left: 1px solid rgba(198, 156, 109, 0.3);
+  padding-left: 2rem;
+}
+
+.stars {
+  color: var(--primary-gold);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.testimonial-author h4 {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+  color: #333;
+}
+
+.testimonial-author p {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero-content {
+    padding: 0 2rem;
+  }
+
+  .overlapping-card,
+  .features-section,
+  .philosophy-section,
+  .ritual-section,
+  .testimonial-section {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .overlapping-card,
+  .philosophy-section {
+    flex-direction: column;
+  }
+
+  .bestseller-image,
+  .philosophy-image {
+    min-height: 300px;
+  }
+
+  .bestseller-content,
+  .philosophy-content {
+    padding: 3rem 2rem;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .feature-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(198, 156, 109, 0.3);
+  }
+
+  .feature-item:nth-child(even) {
+    border-bottom: 1px solid rgba(198, 156, 109, 0.3);
+  }
+
+  .feature-item:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+
+  .ritual-steps {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .testimonial-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 3rem 2rem;
+  }
+
+  .testimonial-author {
+    text-align: center;
+    border-left: none;
+    border-top: 1px solid rgba(198, 156, 109, 0.3);
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 75vh;
+    min-height: 480px;
+    background-size: cover;
+    background-position: right center;
+  }
+
+  .hero-section::before {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 0.3) 100%);
+  }
+
+  .hero-content {
+    transform: translateY(-30px);
+    max-width: 100%;
+    margin-left: 0;
+    padding: 0 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 3.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-section::after {
+    top: 12px;
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    border-radius: 20px;
+  }
+
+  .overlapping-card {
+    margin-top: -60px;
+  }
+
+  .bestseller-content h2,
+  .philosophy-content h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    height: 70vh;
+    min-height: 400px;
+    background-position: 70% center;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 2.6rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn-hero {
+    margin-bottom: 1.5rem;
+    padding: 12px 28px;
+    font-size: 0.8rem;
+  }
+
+  .overlapping-card {
+    margin-top: -40px;
+  }
+
+  .bestseller-content,
+  .philosophy-content {
+    padding: 2rem 1.25rem;
+  }
+
+  .bestseller-content h2,
+  .philosophy-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .bestseller-content p,
+  .philosophy-content p {
+    font-size: 0.95rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .feature-item {
+    border-bottom: 1px solid rgba(198, 156, 109, 0.3);
+  }
+
+  .feature-item:last-child {
+    border-bottom: none;
+  }
+
+  .ritual-section {
+    padding: 2rem 1.25rem;
+  }
+
+  .ritual-title-wrapper {
+    margin-bottom: 2rem;
+  }
+
+  .step {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .testimonial-section {
+    padding: 2rem 1.25rem;
+  }
+
+  .testimonial-text {
+    font-size: 1.1rem;
+  }
+
+  .quote-mark {
+    font-size: 4rem;
+    height: 25px;
+    margin-top: 10px;
+  }
+}
