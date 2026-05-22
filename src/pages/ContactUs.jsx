@@ -1,5 +1,21 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { 
+  Lock, 
+  MessageSquare, 
+  Mail, 
+  MapPin, 
+  Package, 
+  Users, 
+  Truck, 
+  CreditCard, 
+  DollarSign, 
+  FileText, 
+  RefreshCw, 
+  User, 
+  ChevronRight 
+} from 'lucide-react';
 import './ContactUs.css';
 
 const pageVariants = {
@@ -9,6 +25,12 @@ const pageVariants = {
 };
 
 const ContactUs = () => {
+  const navigate = useNavigate();
+
+  const handleQaClick = () => {
+    navigate('/faq');
+  };
+
   return (
     <motion.div
       initial="initial"
@@ -24,7 +46,6 @@ const ContactUs = () => {
           <p className="desc">We're here to help you on your journey to stronger, healthier, and more confident hair.</p>
         </div>
         <div className="contact-banner-image">
-           {/* Placeholder for the products on towels image */}
            <div className="img-placeholder" style={{backgroundImage: 'url("/assets/Women%20Anti-HairFall%20Therapy%20Combo%20Pack/Men%20Anti-Hairfall%20Therapy%20Combo%20.png")'}}></div>
         </div>
       </section>
@@ -75,7 +96,10 @@ const ContactUs = () => {
               
               <div className="form-submit">
                 <button type="submit" className="btn-primary">Send Message &rarr;</button>
-                <p className="privacy-note">🔒 We respect your privacy. Your information is safe with us.</p>
+                <div className="privacy-note">
+                  <Lock size={12} style={{ display: 'inline', marginRight: '4px', verticalAlign: 'middle' }} />
+                  <span>We respect your privacy. Your information is safe with us.</span>
+                </div>
               </div>
             </form>
           </div>
@@ -91,7 +115,7 @@ const ContactUs = () => {
             
             <div className="info-grid">
               <div className="info-card">
-                <div className="icon whatsapp">💬</div>
+                <div className="icon whatsapp"><MessageSquare size={20} /></div>
                 <div className="details">
                   <h4>WhatsApp Support</h4>
                   <p>Quickest way to get help</p>
@@ -100,7 +124,7 @@ const ContactUs = () => {
               </div>
               
               <div className="info-card">
-                <div className="icon email">✉️</div>
+                <div className="icon email"><Mail size={20} /></div>
                 <div className="details">
                   <h4>Email Support</h4>
                   <p>Drop us an email</p>
@@ -109,7 +133,7 @@ const ContactUs = () => {
               </div>
               
               <div className="info-card address-card">
-                <div className="icon location">📍</div>
+                <div className="icon location"><MapPin size={20} /></div>
                 <div className="details">
                   <h4>Business Address</h4>
                   <p>Bengaluru, Karnataka, India</p>
@@ -123,7 +147,7 @@ const ContactUs = () => {
               </div>
               
               <div className="info-card">
-                <div className="icon order">📦</div>
+                <div className="icon order"><Package size={20} /></div>
                 <div className="details">
                   <h4>Order Support</h4>
                   <p>Help with orders & tracking</p>
@@ -132,7 +156,7 @@ const ContactUs = () => {
               </div>
 
               <div className="info-card">
-                <div className="icon collab">🤝</div>
+                <div className="icon collab"><Users size={20} /></div>
                 <div className="details">
                   <h4>Collaboration Queries</h4>
                   <p>Partnerships & collaborations</p>
@@ -147,28 +171,28 @@ const ContactUs = () => {
       {/* Trust Badges Strip */}
       <section className="trust-strip container">
         <div className="trust-item">
-          <span className="icon">🚀</span>
+          <span className="icon"><Truck size={20} /></span>
           <div>
             <strong>Shiprocket</strong>
             <p>Reliable & Fast Shipping</p>
           </div>
         </div>
         <div className="trust-item">
-          <span className="icon">💳</span>
+          <span className="icon"><CreditCard size={20} /></span>
           <div>
             <strong>Razorpay</strong>
             <p>Secure Payments</p>
           </div>
         </div>
         <div className="trust-item">
-          <span className="icon">💵</span>
+          <span className="icon"><DollarSign size={20} /></span>
           <div>
             <strong>COD Available</strong>
             <p>Cash on Delivery</p>
           </div>
         </div>
         <div className="trust-item">
-          <span className="icon">📄</span>
+          <span className="icon"><FileText size={20} /></span>
           <div>
             <strong>GST Invoice</strong>
             <p>Invoice Available</p>
@@ -186,20 +210,30 @@ const ContactUs = () => {
         <p className="subtitle-center">Find answers to common questions</p>
 
         <div className="qa-grid">
-          <button className="qa-btn">
-            <span className="icon">📦</span> Orders & Shipping <span>&gt;</span>
+          <button className="qa-btn" onClick={handleQaClick}>
+            <span className="icon"><Package size={16} /></span>
+            <span>Orders & Shipping</span>
+            <ChevronRight size={14} className="qa-arrow-icon" />
           </button>
-          <button className="qa-btn">
-            <span className="icon">💳</span> Payments & Refunds <span>&gt;</span>
+          <button className="qa-btn" onClick={handleQaClick}>
+            <span className="icon"><CreditCard size={16} /></span>
+            <span>Payments & Refunds</span>
+            <ChevronRight size={14} className="qa-arrow-icon" />
           </button>
-          <button className="qa-btn">
-            <span className="icon">🧴</span> Products & Usage <span>&gt;</span>
+          <button className="qa-btn" onClick={handleQaClick}>
+            <span className="icon"><FileText size={16} /></span>
+            <span>Products & Usage</span>
+            <ChevronRight size={14} className="qa-arrow-icon" />
           </button>
-          <button className="qa-btn">
-            <span className="icon">🔄</span> Returns & Cancellation <span>&gt;</span>
+          <button className="qa-btn" onClick={handleQaClick}>
+            <span className="icon"><RefreshCw size={16} /></span>
+            <span>Returns & Cancellation</span>
+            <ChevronRight size={14} className="qa-arrow-icon" />
           </button>
-          <button className="qa-btn">
-            <span className="icon">👤</span> Account & Others <span>&gt;</span>
+          <button className="qa-btn" onClick={handleQaClick}>
+            <span className="icon"><User size={16} /></span>
+            <span>Account & Others</span>
+            <ChevronRight size={14} className="qa-arrow-icon" />
           </button>
         </div>
       </section>
@@ -211,9 +245,10 @@ const ContactUs = () => {
             <h2>Still have questions?</h2>
             <p>We'd love to hear from you!</p>
             <p className="sub">Our team is here to support you on your hair care journey.</p>
-            <button className="btn-whatsapp">
-              <span className="icon">💬</span> Chat on WhatsApp
-            </button>
+            <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
+              <MessageSquare size={16} />
+              <span>Chat on WhatsApp</span>
+            </a>
           </div>
           <div className="sq-image" style={{backgroundImage: 'url("/assets/Women%20Anti-HairFall%20Therapy%20Combo%20Pack/Women%20Anti-Hairfall%20Therapy.png")'}}></div>
         </div>

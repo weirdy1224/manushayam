@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { Leaf, Droplets, Sparkles, Shield, Clock, Smile } from 'lucide-react';
 import './Home.css';
 
 const pageVariants = {
@@ -21,20 +22,20 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-content">
-            <h1 className="hero-title">
-              Rooted in<br />Ritual.
-            </h1>
-            <p className="hero-subtitle">
-              Ayurvedic anti-hair-fall therapy<br />for stronger, healthier hair.
-            </p>
-            <Link to="/product/combo" className="btn-hero">
-              SHOP THERAPY &rarr;
-            </Link>
-            <div className="hero-link">
-              <Link to="/about">OUR PHILOSOPHY</Link>
-            </div>
+          <h1 className="hero-title">
+            Rooted in<br />Ritual.
+          </h1>
+          <p className="hero-subtitle">
+            Ayurvedic anti-hair-fall therapy<br />for stronger, healthier hair.
+          </p>
+          <Link to="/solutions" className="btn-hero">
+            SHOP THERAPY &rarr;
+          </Link>
+          <div className="hero-link">
+            <Link to="/about">OUR PHILOSOPHY</Link>
           </div>
-        </section>
+        </div>
+      </section>
 
       <div className="home-container">
         {/* Best Seller Section - Overlaps Hero */}
@@ -58,22 +59,22 @@ const Home = () => {
         <section className="features-section ui-card">
           <div className="features-grid">
             <div className="feature-item">
-              <div className="feature-icon">🌿</div>
+              <div className="feature-icon"><Leaf size={24} /></div>
               <h4>8 Medicinal Herbs</h4>
               <p>Potent & Pure</p>
             </div>
             <div className="feature-item">
-              <div className="feature-icon">💧</div>
+              <div className="feature-icon"><Droplets size={24} /></div>
               <h4>4 Nourishing Oils</h4>
               <p>Deeply Restorative</p>
             </div>
             <div className="feature-item">
-              <div className="feature-icon">✨</div>
+              <div className="feature-icon"><Sparkles size={24} /></div>
               <h4>Chemical Free</h4>
               <p>Safe & Gentle</p>
             </div>
             <div className="feature-item">
-              <div className="feature-icon">🥣</div>
+              <div className="feature-icon"><Shield size={24} /></div>
               <h4>100% Ayurvedic</h4>
               <p>Rooted in Tradition</p>
             </div>
@@ -107,7 +108,7 @@ const Home = () => {
           <div className="ritual-steps">
             <div className="step">
               <div className="step-number">1</div>
-              <div className="step-icon">🤲</div>
+              <div className="step-icon"><Droplets size={24} /></div>
               <div className="step-text">
                 <h4>APPLY</h4>
                 <p>Massage gently into scalp & roots.</p>
@@ -115,7 +116,7 @@ const Home = () => {
             </div>
             <div className="step">
               <div className="step-number">2</div>
-              <div className="step-icon">🥣</div>
+              <div className="step-icon"><Clock size={24} /></div>
               <div className="step-text">
                 <h4>NOURISH</h4>
                 <p>Leave on for 30-60 minutes.</p>
@@ -123,7 +124,7 @@ const Home = () => {
             </div>
             <div className="step">
               <div className="step-number">3</div>
-              <div className="step-icon">🚿</div>
+              <div className="step-icon"><Smile size={24} /></div>
               <div className="step-text">
                 <h4>RINSE</h4>
                 <p>Wash with a mild, natural cleanser.</p>

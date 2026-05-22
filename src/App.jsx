@@ -15,6 +15,15 @@ import ProductDetails from './pages/ProductDetails';
 import BlogsReviews from './pages/BlogsReviews';
 import ContactUs from './pages/ContactUs';
 import Solutions from './pages/Solutions';
+import Login from './pages/Login';
+import Cart from './pages/Cart';
+import Checkout from './pages/Checkout';
+import Orders from './pages/Orders';
+import Admin from './pages/Admin';
+import Faq from './pages/Faq';
+
+// Context
+import { AppProvider } from './context/AppContext';
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -28,11 +37,11 @@ function ScrollToTop() {
 const AppContent = () => {
   const [loading, setLoading] = useState(true);
 
-  // Initial 3-second loader
+  // Initial 4-second loader
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 4000); // Wait 4 seconds as per user request to allow transition
+    }, 4000); // Wait 4 seconds to allow transition
     return () => clearTimeout(timer);
   }, []);
 
@@ -53,6 +62,12 @@ const AppContent = () => {
               <Route path="/product/:id" element={<ProductDetails />} />
               <Route path="/blogs" element={<BlogsReviews />} />
               <Route path="/contact" element={<ContactUs />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/checkout" element={<Checkout />} />
+              <Route path="/orders" element={<Orders />} />
+              <Route path="/admin" element={<Admin />} />
+              <Route path="/faq" element={<Faq />} />
             </Routes>
           </AnimatePresence>
         </main>
@@ -64,10 +79,13 @@ const AppContent = () => {
 
 function App() {
   return (
-    <Router>
-      <AppContent />
-    </Router>
+    <AppProvider>
+      <Router>
+        <AppContent />
+      </Router>
+    </AppProvider>
   );
 }
 
 export default App;
+

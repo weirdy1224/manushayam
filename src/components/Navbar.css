@@ -23,14 +23,20 @@
   gap: 6px;
 }
 
-.banner-item span {
+.banner-icon {
   color: var(--primary-gold);
+  flex-shrink: 0;
+}
+
+.logged-in-user-icon {
+  color: var(--primary-gold) !important;
 }
 
 .banner-separator {
   margin: 0 16px;
   color: #666;
 }
+
 
 .main-navbar {
   display: flex;
@@ -220,4 +226,128 @@
     gap: 12px;
   }
 }
+
+/* Profile Dropdown Styling */
+.nav-profile-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 10px;
+  width: 220px;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid var(--primary-gold);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(44, 27, 18, 0.15);
+  padding: 12px 0;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  animation: fadeInDropdown 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.profile-dropdown::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 0;
+  right: 0;
+  height: 15px;
+  background: transparent;
+}
+
+@keyframes fadeInDropdown {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-header {
+  padding: 4px 16px 10px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+}
+
+.dropdown-header .user-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dropdown-header .user-email {
+  font-size: 0.75rem;
+  color: #777;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dropdown-header .role-tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--primary-gold);
+  background-color: #fcf9f4;
+  border: 1px solid var(--primary-gold);
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background-color: var(--border-color, #e5e5e5);
+  margin: 6px 0;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #444;
+  text-align: left;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.dropdown-item:hover {
+  background-color: #fcf9f4;
+  color: var(--primary-gold);
+  padding-left: 20px;
+}
+
+.logout-action-btn {
+  color: #9c2a2a;
+}
+
+.logout-action-btn:hover {
+  background-color: #fdf2f2;
+  color: #b91c1c;
+  padding-left: 20px;
+}
+
 

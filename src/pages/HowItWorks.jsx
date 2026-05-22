@@ -1,6 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { 
+  Droplets, 
+  Activity, 
+  TrendingDown, 
+  Leaf, 
+  Shield, 
+  Award, 
+  RefreshCw, 
+  User, 
+  Sparkles,
+  Sun,
+  Layers,
+  Heart
+} from 'lucide-react';
 import './HowItWorks.css';
 
 const pageVariants = {
@@ -24,7 +38,7 @@ const HowItWorks = () => {
           <div className="hiw-banner-left">
             <h2>How<br/>ManushyaM&trade; Works</h2>
             <p>For reduced hair fall in just 1 oil shot.</p>
-            <Link to="/product/combo" className="btn-primary">EXPLORE THE SCIENCE &rarr;</Link>
+            <Link to="/solutions" className="btn-primary">EXPLORE THE SCIENCE &rarr;</Link>
           </div>
           
           <div className="hiw-banner-steps">
@@ -50,28 +64,28 @@ const HowItWorks = () => {
           <div className="hiw-banner-right">
             <ul className="benefits-list">
               <li>
-                <span className="benefit-icon">💧</span>
+                <span className="benefit-icon"><Droplets size={18} /></span>
                 <div>
                   <strong>Deep Nourishment</strong>
                   <p>Nourishes the root where it matters most.</p>
                 </div>
               </li>
               <li>
-                <span className="benefit-icon">💪</span>
+                <span className="benefit-icon"><Activity size={18} /></span>
                 <div>
                   <strong>Strengthens from Within</strong>
                   <p>Strengthens hair from the root to the shaft.</p>
                 </div>
               </li>
               <li>
-                <span className="benefit-icon">📉</span>
+                <span className="benefit-icon"><TrendingDown size={18} /></span>
                 <div>
                   <strong>Reduces Hair Fall</strong>
                   <p>Helps reduce hair fall from the 3rd application.</p>
                 </div>
               </li>
               <li>
-                <span className="benefit-icon">🌿</span>
+                <span className="benefit-icon"><Leaf size={18} /></span>
                 <div>
                   <strong>Powered by Nature</strong>
                   <p>Unique blend of Ayurvedic bio-actives & natural oils.</p>
@@ -94,22 +108,22 @@ const HowItWorks = () => {
             
             <div className="dht-features-grid">
               <div className="dht-feature">
-                <div className="icon">🛡️</div>
+                <div className="icon"><Shield size={20} /></div>
                 <h4>Helps reduce DHT stress on follicles</h4>
                 <p>Supports the scalp's natural defense against DHT.</p>
               </div>
               <div className="dht-feature">
-                <div className="icon">🌱</div>
+                <div className="icon"><Award size={20} /></div>
                 <h4>Supports stronger-looking roots</h4>
                 <p>Helps nourish hair roots for resilience and strength.</p>
               </div>
               <div className="dht-feature">
-                <div className="icon">💧</div>
+                <div className="icon"><RefreshCw size={20} /></div>
                 <h4>Promotes a healthier scalp environment</h4>
                 <p>Helps maintain scalp balance for optimal hair conditions.</p>
               </div>
               <div className="dht-feature">
-                <div className="icon">🌿</div>
+                <div className="icon"><Leaf size={20} /></div>
                 <h4>Adaptogenic botanical support for hair wellness</h4>
                 <p>Ginseng adaptogens help the scalp adapt to daily stressors.</p>
               </div>
@@ -122,14 +136,12 @@ const HowItWorks = () => {
               <div className="diagram-row">
                 <div className="diagram-col">
                   <h5>BEFORE: DHT ATTACKS</h5>
-                  {/* Diagram Placeholder */}
                   <div className="diagram-img" style={{backgroundColor: '#e8dec8', height: '200px'}}></div>
                   <p>DHT binds to follicles and can shrink the root, leading to weaker, thinner hair.</p>
                 </div>
                 <div className="diagram-arrow">&rarr;</div>
                 <div className="diagram-col">
                   <h5>AFTER: DHT BLOCKED</h5>
-                  {/* Diagram Placeholder */}
                   <div className="diagram-img" style={{backgroundColor: '#e8dec8', height: '200px'}}></div>
                   <p>Ginseng adaptogens help support natural protection against DHT, helping maintain healthier follicles.</p>
                 </div>
@@ -149,37 +161,37 @@ const HowItWorks = () => {
         
         <div className="concern-grid">
           <div className="concern-card">
-            <div className="icon">👨</div>
+            <div className="icon"><User size={24} /></div>
             <h4>Hair Fall<br/>For Men</h4>
             <p>Reduce hair fall & boost strength with Ayurvedic care for men.</p>
             <Link to="/product/men" className="btn-outline btn-full">SHOP NOW &rarr;</Link>
           </div>
           <div className="concern-card">
-            <div className="icon">👩</div>
+            <div className="icon"><User size={24} /></div>
             <h4>Hair Fall<br/>For Women</h4>
             <p>Control hair fall & nourish naturally for stronger, healthier hair.</p>
             <Link to="/product/women" className="btn-outline btn-full">SHOP NOW &rarr;</Link>
           </div>
           <div className="concern-card">
-            <div className="icon">🌱</div>
+            <div className="icon"><Award size={24} /></div>
             <h4>Weak<br/>Roots</h4>
             <p>Strengthen roots & improve scalp health from within.</p>
             <Link to="/product/combo" className="btn-outline btn-full">SHOP NOW &rarr;</Link>
           </div>
           <div className="concern-card">
-            <div className="icon">🍃</div>
+            <div className="icon"><TrendingDown size={24} /></div>
             <h4>Thinning<br/>Hair</h4>
             <p>Improve density & reduce thinning with herbal actives.</p>
             <Link to="/product/combo" className="btn-outline btn-full">SHOP NOW &rarr;</Link>
           </div>
           <div className="concern-card">
-            <div className="icon">❄️</div>
+            <div className="icon"><RefreshCw size={24} /></div>
             <h4>Dandruff &<br/>Itchy Scalp</h4>
             <p>Soothe scalp irritation & fight dandruff effectively</p>
             <Link to="/product/combo" className="btn-outline btn-full">SHOP NOW &rarr;</Link>
           </div>
           <div className="concern-card">
-            <div className="icon">🧴</div>
+            <div className="icon"><Layers size={24} /></div>
             <h4>Complete Hair<br/>Fall Routine</h4>
             <p>Complete Ayurvedic routine for total hair care.</p>
             <Link to="/product/combo" className="btn-outline btn-full">SHOP NOW &rarr;</Link>
@@ -243,37 +255,36 @@ const HowItWorks = () => {
         <div className="support-ingredients">
           <h4 className="sub-title center">Key Support Ingredients</h4>
           <div className="support-grid">
-            {/* Added 5 support ingredients based on UI */}
             <div className="support-item">
-              <div className="icon">🧅</div>
+              <div className="icon"><Sparkles size={20} /></div>
               <div className="text">
                 <h5>Onion Seed</h5>
                 <p>Rich in sulphur & flavonoids, help strengthen roots and reduce hair fall.</p>
               </div>
             </div>
             <div className="support-item">
-              <div className="icon">🌺</div>
+              <div className="icon"><Heart size={20} /></div>
               <div className="text">
                 <h5>Bakuchiol</h5>
                 <p>Retinol alternative that supports stronger roots and healthy scalp.</p>
               </div>
             </div>
             <div className="support-item">
-              <div className="icon">🧬</div>
+              <div className="icon"><Activity size={20} /></div>
               <div className="text">
                 <h5>Biotin</h5>
                 <p>Supports keratin production for stronger hair.</p>
               </div>
             </div>
             <div className="support-item">
-              <div className="icon">☀️</div>
+              <div className="icon"><Sun size={20} /></div>
               <div className="text">
                 <h5>Vitamin D</h5>
                 <p>Supports healthy hair follicles & improves hair cycle.</p>
               </div>
             </div>
             <div className="support-item">
-              <div className="icon">🌰</div>
+              <div className="icon"><Sparkles size={20} /></div>
               <div className="text">
                 <h5>Pumpkin Seed Extract</h5>
                 <p>Rich in nutrients that support scalp health and hair strength.</p>

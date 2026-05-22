@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Leaf, Award, Users, Scale, Star } from 'lucide-react';
 import './BlogsReviews.css';
 
 const pageVariants = {
@@ -25,32 +26,32 @@ const BlogsReviews = () => {
           <p className="desc">Expert advice, honest reviews, and time-tested rituals for stronger, healthier hair.</p>
           
           <div className="rating-badge-large">
-            <span className="star-rating">4.8 ★</span>
+            <span className="star-rating">
+              4.8 <Star size={16} style={{ display: 'inline', fill: 'currentColor' }} />
+            </span>
             <span className="rating-text">on Amazon & Flipkart</span>
-            <span className="rating-icons">a f</span>
           </div>
 
           <div className="banner-features">
             <div className="b-feature">
-              <span className="icon">🌿</span>
+              <span className="icon"><Leaf size={20} /></span>
               <p>Ayurvedic<br/>Time-Tested</p>
             </div>
             <div className="b-feature">
-              <span className="icon">🌳</span>
+              <span className="icon"><Award size={20} /></span>
               <p>Backed by<br/>Ayurveda</p>
             </div>
             <div className="b-feature">
-              <span className="icon">👥</span>
+              <span className="icon"><Users size={20} /></span>
               <p>Real People<br/>Real Results</p>
             </div>
             <div className="b-feature">
-              <span className="icon">⚖️</span>
+              <span className="icon"><Scale size={20} /></span>
               <p>Honest<br/>& Helpful</p>
             </div>
           </div>
         </div>
         <div className="blogs-banner-image">
-           {/* Placeholder for the products on towels image */}
            <div className="img-placeholder" style={{backgroundImage: 'url("/assets/Men%20Anti-Hairfall%20Therapy/ChatGPT%20Image%20May%203,%202026,%2011_01_51%20AM%20(6).png")'}}></div>
         </div>
       </section>
@@ -182,7 +183,7 @@ const BlogsReviews = () => {
         <aside className="reviews-sidebar">
           <div className="sidebar-widget reviews-widget">
             <h3>What People Love About ManushyaM</h3>
-            <div className="rating-huge">4.8 <span>★</span></div>
+            <div className="rating-huge">4.8 <span className="star-inline"><Star size={20} style={{ display: 'inline', fill: 'currentColor' }} /></span></div>
             <p>Average Rating</p>
             <p className="based-on">based on 10,000+ reviews</p>
             

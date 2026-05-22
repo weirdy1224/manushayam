@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { Leaf, Droplets, Sparkles, Globe, Check } from 'lucide-react';
 import './About.css';
 
 const pageVariants = {
@@ -72,27 +73,27 @@ const About = () => {
         
         <div className="features-grid">
           <div className="feature-item">
-            <div className="feature-icon">🌿</div>
+            <div className="feature-icon"><Leaf size={24} /></div>
             <h4>Rooted in Ayurveda</h4>
             <p>Inspired by ancient wisdom, proven by time.</p>
           </div>
           <div className="feature-item">
-            <div className="feature-icon">🍃</div>
+            <div className="feature-icon"><Leaf size={24} /></div>
             <h4>Pure Ingredients</h4>
             <p>Handpicked herbs and nourishing oils of the highest quality.</p>
           </div>
           <div className="feature-item">
-            <div className="feature-icon">💧</div>
+            <div className="feature-icon"><Droplets size={24} /></div>
             <h4>Mindful Formulation</h4>
             <p>Crafted in small batches with care and intention.</p>
           </div>
           <div className="feature-item">
-            <div className="feature-icon">✨</div>
+            <div className="feature-icon"><Sparkles size={24} /></div>
             <h4>Scalp & Hair Wellbeing</h4>
             <p>Therapies that nurture balance, strength and natural beauty.</p>
           </div>
           <div className="feature-item">
-            <div className="feature-icon">🌍</div>
+            <div className="feature-icon"><Globe size={24} /></div>
             <h4>Conscious & Caring</h4>
             <p>We blend tradition with thoughtful innovation.</p>
           </div>
@@ -110,10 +111,22 @@ const About = () => {
               We source ethically, blend mindfully and create therapies that honor your hair, your wellbeing and our planet.
             </p>
             <ul className="promise-list">
-              <li><span className="check">✓</span> Ethically sourced ingredients</li>
-              <li><span className="check">✓</span> Sustainable & eco-friendly practices</li>
-              <li><span className="check">✓</span> Transparent & honest formulations</li>
-              <li><span className="check">✓</span> Care - for you, your hair and our planet</li>
+              <li>
+                <Check size={14} className="check-icon-gold" style={{ display: 'inline', marginRight: '8px' }} />
+                <span>Ethically sourced ingredients</span>
+              </li>
+              <li>
+                <Check size={14} className="check-icon-gold" style={{ display: 'inline', marginRight: '8px' }} />
+                <span>Sustainable & eco-friendly practices</span>
+              </li>
+              <li>
+                <Check size={14} className="check-icon-gold" style={{ display: 'inline', marginRight: '8px' }} />
+                <span>Transparent & honest formulations</span>
+              </li>
+              <li>
+                <Check size={14} className="check-icon-gold" style={{ display: 'inline', marginRight: '8px' }} />
+                <span>Care - for you, your hair and our planet</span>
+              </li>
             </ul>
           </div>
           <div className="promise-image">

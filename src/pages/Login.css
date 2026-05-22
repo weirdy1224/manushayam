@@ -1,0 +1,144 @@
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+}
+
+.login-card-wrapper {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  overflow: hidden;
+}
+
+.login-tabs {
+  display: flex;
+  background-color: #f7f4ef;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.login-tabs .tab-btn {
+  flex: 1;
+  padding: 1.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 1rem;
+  color: #777;
+  transition: all 0.3s ease;
+}
+
+.login-tabs .tab-btn.active {
+  background: white;
+  color: var(--primary-gold);
+  border-bottom: 2px solid var(--primary-gold);
+}
+
+.login-form-container {
+  padding: 2.5rem;
+}
+
+.login-form-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.login-subtitle {
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #555;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.form-group input {
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  transition: border-color 0.3s ease;
+  background-color: #fcfbf9;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary-gold);
+  background-color: white;
+}
+
+.form-helper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.demo-info {
+  color: #888;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.auth-submit-btn {
+  width: 100%;
+  justify-content: center;
+  padding: 0.9rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.auth-alert {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.8rem 1rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.error-alert {
+  background-color: #fdf2f2;
+  border: 1px solid #f8b4b4;
+  color: #9b1c1c;
+}
+
+.success-alert {
+  background-color: #f3faf5;
+  border: 1px solid #def7ec;
+  color: #03543f;
+}
